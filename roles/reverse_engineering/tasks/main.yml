@@ -1,0 +1,13 @@
+---
+- name: ReverseEng | Install  native tools
+  apt:
+    name:
+      - binwalk
+      - gdb
+      - gdb-mingw-w64
+      - bsdmainutils
+      - apktool
+
+- name: ReverseEng | Install radare2 (deb)
+  apt:
+    deb: "{{ radare2_deb }}"

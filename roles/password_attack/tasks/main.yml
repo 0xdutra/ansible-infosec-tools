@@ -1,0 +1,8 @@
+---
+- name: Password attack | Install tools
+  apt:
+    name:
+      - hydra
+      - john
+      - crunch
+      - hashcat

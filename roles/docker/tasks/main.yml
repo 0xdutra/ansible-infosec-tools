@@ -1,0 +1,31 @@
+---
+- name: Docker | Install requirements
+  apt:
+    name:
+      - "apt-transport-https"
+      - "ca-certificates"
+      - "gnupg2"
+      - "software-properties-common"
+    state: present
+
+- name: Docker | Add Docker GPG Key
+  apt_key:
+    url: "{{ docker_gpg_url }}"
+    state: present
+
+- name: Docker | Add repository
+  apt_repository:
+    repo: "{{ docker_apt_repository }}"
+    state: present
+
+- name: Docker | Update packages
+  apt:
+    update_cache: yes
+
+- name: Docker | Install Docker
+  apt:
+    name:
+      - "docker-ce"
+      - "docker-ce-cli"
+      - "containerd.io"
+    state: present

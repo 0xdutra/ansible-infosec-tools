@@ -1,0 +1,9 @@
+---
+- name: Sniffer | Install tools
+  apt:
+    name:
+      - tcpdump
+      - wireshark
+      - sslstrip
+      - sslsplit
+      - mitmproxy

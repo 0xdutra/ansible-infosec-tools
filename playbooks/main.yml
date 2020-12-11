@@ -1,0 +1,25 @@
+---
+- name: Infosec | Install tools for penetration testing
+  hosts: all
+
+  roles:
+    - role: base
+      tags: base
+
+    - role: docker
+      tags: docker
+
+    - role: exploitation
+      tags: exploitation
+
+    - role: information_gathering
+      tags: information_gathering
+
+    - role: password_attack
+      tags: password_attack
+
+    - role: reverse_engineering
+      tags: reverse_engineering
+
+    - role: sniffer
+      tags: sniffer
