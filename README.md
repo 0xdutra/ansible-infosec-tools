@@ -5,9 +5,12 @@
   <p align="center">
     <a href="https://twitter.com/0xdutra">
       <img src="https://img.shields.io/badge/twitter-@0xdutra-blue.svg">
+    <a href="https://github.com/0xdutra/ansible-infosec-tools/workflows ansible-lint/badge.svg?branch=main">
+      <img src="https://github.com/0xdutra/ansible-infosec-tools/workflows/ansible-lint/badge.svg">
     </a>
   </p>
 </p>
+
 
 <hr>
 
