@@ -10,6 +10,17 @@ GitHub:     https://github.com/0xdutra
 
 }
 
+function check_commands() {
+    if ! command -v vagrant &> /dev/null; then
+        echo "Please, install vagrant"
+        exit 1
+
+    elif ! command -v ansible &> /dev/null; then
+        echo "Please, install ansible"
+        exit 1
+    fi
+}
+
 function usage() {
     USAGE="
       -p    provision environment
@@ -56,4 +67,5 @@ function main() {
     esac
 }
 
+check_commands
 main $@
